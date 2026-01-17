@@ -94,15 +94,30 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-12"
           >
-            <Button variant="hero" size="lg" className="sm:size-xl" onClick={handleCall}>
+            <Button
+              variant="hero"
+              size="lg"
+              className="sm:h-14 sm:px-10 sm:text-base"
+              onClick={handleCall}
+            >
               <Phone className="w-5 h-5" />
               Call Now
             </Button>
-            <Button variant="heroOutline" size="lg" className="sm:size-xl" onClick={handleWhatsApp}>
+            <Button
+              variant="heroOutline"
+              size="lg"
+              className="sm:h-14 sm:px-10 sm:text-base"
+              onClick={handleWhatsApp}
+            >
               <MessageCircle className="w-5 h-5" />
               Get Free Site Visit
             </Button>
-            <Button variant="whatsapp" size="lg" className="sm:size-xl" onClick={handleWhatsApp}>
+            <Button
+              variant="whatsapp"
+              size="lg"
+              className="sm:h-14 sm:px-10 sm:text-base"
+              onClick={handleWhatsApp}
+            >
               <MessageCircle className="w-5 h-5" />
               WhatsApp
             </Button>

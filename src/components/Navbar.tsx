@@ -44,13 +44,13 @@ export const Navbar = () => {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 flex items-center justify-between gap-3">
         {/* Logo */}
-        <a href="#home" className="flex flex-col">
-          <span className="font-serif text-xl md:text-2xl font-bold text-cream">
+        <a href="#home" className="flex flex-col min-w-0 max-w-[62vw] sm:max-w-none">
+          <span className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-cream truncate">
             Bhagwati Builder
           </span>
-          <span className="text-xs text-gold font-medium tracking-wider">
+          <span className="text-[10px] sm:text-xs text-gold font-medium tracking-wider truncate">
             Jaipur Builder • Since 2012
           </span>
         </a>
