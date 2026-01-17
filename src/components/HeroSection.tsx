@@ -16,33 +16,34 @@ export const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-charcoal">
-      {/* Video Background */}
+      {/* Video Background - Fixed for mobile */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
+          style={{ objectFit: 'cover' }}
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/60 to-charcoal/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/70 to-charcoal/95" />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 pt-24 pb-12">
+      <div className="container mx-auto px-4 relative z-10 pt-28 md:pt-24 pb-12">
         <div className="max-w-4xl">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm border border-gold/40 rounded-full px-4 py-2 mb-6"
+            className="inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm border border-gold/40 rounded-full px-3 md:px-4 py-2 mb-4 md:mb-6"
           >
             <MapPin className="w-4 h-4 text-gold" />
-            <span className="text-cream text-sm font-medium">
+            <span className="text-cream text-xs md:text-sm font-medium">
               Trusted Builders in Jaipur Since 2012
             </span>
           </motion.div>
@@ -52,7 +53,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-cream leading-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-cream leading-tight mb-4 md:mb-6"
           >
             Complete House Construction
             <br />
@@ -66,7 +67,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-cream/80 mb-4 max-w-2xl font-light"
+            className="text-base md:text-lg lg:text-xl text-cream/80 mb-3 md:mb-4 max-w-2xl font-light"
           >
             From foundation to final decor – We build & design your dream home
           </motion.p>
@@ -76,12 +77,12 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col gap-2 mb-8"
+            className="flex flex-col gap-1 md:gap-2 mb-6 md:mb-8"
           >
-            <p className="text-gold italic font-serif text-lg">
+            <p className="text-gold italic font-serif text-sm md:text-lg">
               "We Build Your Dream Not Only A House 🏡"
             </p>
-            <p className="text-gold italic font-serif text-lg">
+            <p className="text-gold italic font-serif text-sm md:text-lg">
               "We Decor Your Dream Not Only Your House 🏠"
             </p>
           </motion.div>
@@ -91,17 +92,17 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 mb-12"
+            className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-12"
           >
-            <Button variant="hero" size="xl" onClick={handleCall}>
+            <Button variant="hero" size="lg" className="sm:size-xl" onClick={handleCall}>
               <Phone className="w-5 h-5" />
               Call Now
             </Button>
-            <Button variant="heroOutline" size="xl" onClick={handleWhatsApp}>
+            <Button variant="heroOutline" size="lg" className="sm:size-xl" onClick={handleWhatsApp}>
               <MessageCircle className="w-5 h-5" />
               Get Free Site Visit
             </Button>
-            <Button variant="whatsapp" size="xl" onClick={handleWhatsApp}>
+            <Button variant="whatsapp" size="lg" className="sm:size-xl" onClick={handleWhatsApp}>
               <MessageCircle className="w-5 h-5" />
               WhatsApp
             </Button>
@@ -112,7 +113,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8"
           >
             {[
               { number: "12+", label: "Years Experience" },
@@ -121,22 +122,22 @@ export const HeroSection = () => {
               { number: "100%", label: "Satisfaction" },
             ].map((stat, index) => (
               <div key={index} className="text-center md:text-left">
-                <div className="text-3xl md:text-4xl font-serif font-bold text-gold">
+                <div className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-gold">
                   {stat.number}
                 </div>
-                <div className="text-cream/70 text-sm mt-1">{stat.label}</div>
+                <div className="text-cream/70 text-xs md:text-sm mt-1">{stat.label}</div>
               </div>
             ))}
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator - Hidden on mobile */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-10 hidden md:block"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
