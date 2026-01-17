@@ -26,11 +26,11 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-charcoal text-cream border-t border-gold/20 overflow-hidden">
+    <footer className="bg-charcoal text-cream border-t border-gold/20">
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Brand Column */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
             <h3 className="font-serif text-xl md:text-2xl font-bold mb-2 break-words">
               Bhagwati Builder
             </h3>
@@ -142,7 +142,9 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 md:mt-16 pt-6 md:pt-8 border-t border-gold/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-cream/50 text-xs md:text-sm text-center md:text-left break-words max-w-full">
-            © 2024 Bhagwati Builder & Sanwariya Home Decor. All rights reserved.
+            <span className="block">© 2024 Bhagwati Builder</span>
+            <span className="block">Sanwariya Home Decor</span>
+            <span className="block">All rights reserved.</span>
           </p>
           <div className="flex items-center gap-3 md:gap-4 text-cream/50 text-xs md:text-sm flex-wrap justify-center">
             <span>Jaipur, Rajasthan</span>
